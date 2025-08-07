@@ -1,0 +1,30 @@
+### Recuperar todas las peliculas
+GET http://localhost:3000/movies
+
+### Recuperar una pelicula por id
+GET http://localhost:3000/movies/8fb17ae1-bdfe-45e5-a871-4772d7e526b8
+
+### Recuperar todas las peliculas por genero
+GET http://localhost:3000/movies/?genre=Drama
+
+### Crar una pelicula
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+	"title": "Star Wars",
+	"year": 2014,
+	"director": "Christopher Nolan",
+	"duration": 169,
+
+	"poster": "https://m.media-amazon.com/images/I/81aA7hEEykL._AC_SL1500_.jpg",
+	"genre": ["Adventure", "Drama", "Sci-Fi"]
+}
+
+### Actualizar una pelicula
+PATCH  http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year":2001
+}
